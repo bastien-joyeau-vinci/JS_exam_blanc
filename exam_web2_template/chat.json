@@ -1,0 +1,361 @@
+{
+  "requesterUsername": "bastien-joyeau-vinci",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/165775081",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_af227a06-75af-43e2-bee2-3e2a94f366f5",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 84
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 85
+            },
+            "text": "je veux que quand cover n'est pas defni, on utilise une image par defaut du frontend",
+            "kind": "text"
+          }
+        ],
+        "text": "je veux que quand cover n'est pas defni, on utilise une image par defaut du frontend"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "id": "vscode.implicit.viewport",
+            "name": "file:books.ts",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 33,
+                "startColumn": 1,
+                "endLineNumber": 66,
+                "endColumn": 1
+              }
+            },
+            "isFile": true,
+            "isDynamic": true,
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Pour utiliser une image par défaut lorsque la propriété ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "cover",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 32,
+                "startColumn": 3,
+                "endLineNumber": 32,
+                "endColumn": 3
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/backend/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/backend/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/backend/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "b1f20d1e-c729-42a4-b7b5-5af07ec6e49e"
+        },
+        {
+          "value": " n'est pas définie, vous pouvez ajouter une vérification dans les fonctions ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "readAllBooks",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 48,
+                "startColumn": 10,
+                "endLineNumber": 48,
+                "endColumn": 10
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "b42919d5-da1d-4711-b61c-231cf2b0a18c"
+        },
+        {
+          "value": " et ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "readOneBook",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 53,
+                "startColumn": 10,
+                "endLineNumber": 53,
+                "endColumn": 10
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "dbb6750a-466f-409f-8e82-07dbba574859"
+        },
+        {
+          "value": ". Voici comment vous pouvez le faire :\n\n```typescript\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "const defaultCover = \"https://example.com/default-cover.jpg\"; // Remplacez par l'URL de votre image par défaut\n\nfunction readAllBooks(): Book[] {\n  const books = parse(jsonDbPath, defaultBooks);\n  return books.map(book => ({\n    ...book,\n    cover: book.cover || defaultCover\n  }));\n}\n\nfunction readOneBook(id: number): Book | undefined {\n  const books = parse(jsonDbPath, defaultBooks);\n  const book = books.find((book) => book.id === id);\n  if (!book) {\n    return undefined;\n  }\n  return {\n    ...book,\n    cover: book.cover || defaultCover\n  };\n}\n```\n\nCette modification garantit que si la propriété ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "cover",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 32,
+                "startColumn": 3,
+                "endLineNumber": 32,
+                "endColumn": 3
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/backend/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/backend/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/backend/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "c318d086-6da7-4fd1-b8be-11ea9832deb1"
+        },
+        {
+          "value": " d'un livre n'est pas définie, elle sera remplacée par l'URL de l'image par défaut.",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "responseId": "response_8f32f225-9458-4924-8d19-6d55f31ffa2e",
+      "isHidden": false,
+      "result": {
+        "timings": {
+          "firstProgress": 1303,
+          "totalElapsed": 3896
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "const defaultCover = \"https://example.com/default-cover.jpg\"; // Remplacez par l'URL de votre image par défaut\n\nfunction readAllBooks(): Book[] {\n  const books = parse(jsonDbPath, defaultBooks);\n  return books.map(book => ({\n    ...book,\n    cover: book.cover || defaultCover\n  }));\n}\n\nfunction readOneBook(id: number): Book | undefined {\n  const books = parse(jsonDbPath, defaultBooks);\n  const book = books.find((book) => book.id === id);\n  if (!book) {\n    return undefined;\n  }\n  return {\n    ...book,\n    cover: book.cover || defaultCover\n  };\n}\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+                "scheme": "file"
+              },
+              "language": "typescript",
+              "markdownBeforeBlock": "Pour utiliser une image par défaut lorsque la propriété `cover` n'est pas définie, vous pouvez ajouter une vérification dans les fonctions `readAllBooks` et `readOneBook`. Voici comment vous pouvez le faire :\n\n"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "je veux que quand cover n'est pas defni, on utilise une image par defaut du frontend"
+            },
+            {
+              "role": "assistant",
+              "content": "Pour utiliser une image par défaut lorsque la propriété `cover` n'est pas définie, vous pouvez ajouter une vérification dans les fonctions `readAllBooks` et `readOneBook`. Voici comment vous pouvez le faire :\n\n```typescript\n// filepath: /Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts\nconst defaultCover = \"https://example.com/default-cover.jpg\"; // Remplacez par l'URL de votre image par défaut\n\nfunction readAllBooks(): Book[] {\n  const books = parse(jsonDbPath, defaultBooks);\n  return books.map(book => ({\n    ...book,\n    cover: book.cover || defaultCover\n  }));\n}\n\nfunction readOneBook(id: number): Book | undefined {\n  const books = parse(jsonDbPath, defaultBooks);\n  const book = books.find((book) => book.id === id);\n  if (!book) {\n    return undefined;\n  }\n  return {\n    ...book,\n    cover: book.cover || defaultCover\n  };\n}\n```\n\nCette modification garantit que si la propriété `cover` d'un livre n'est pas définie, elle sera remplacée par l'URL de l'image par défaut."
+            }
+          ],
+          "modelMessageId": "e1b9d383-e3c1-4af2-aead-6aa28f52f530",
+          "responseId": "4e1e259f-5284-4be0-bb5d-14aa6d41f622",
+          "sessionId": "934ca0a2-2282-4aff-9729-399c7389e10d",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [
+        {
+          "kind": "reply",
+          "agentId": "github.copilot.default",
+          "message": "Comment intégrer cela dans le frontend ?"
+        }
+      ],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Demander à Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "Vous pouvez me poser des questions générales sur la programmation ou converser avec les participants suivants qui ont une expertise spécialisée et peuvent effectuer les actions suivantes :",
+          "helpTextVariablesPrefix": "Vous pouvez également m’aider à comprendre votre question en utilisant les variables suivantes pour me donner un contexte supplémentaire :",
+          "helpTextPostfix": {
+            "value": "Pour avoir une conversation intéressante, posez-moi des questions comme si j’étais un vrai programmeur :\n\n* **Montrez-moi le code** dont vous voulez parler en ouvrant les fichiers et en sélectionnant les lignes les plus importantes.\n* **Apportez des améliorations** en me posant des questions de suivi, en ajoutant des clarifications, en fournissant des erreurs, etc.\n* **Passez en revue mon code suggéré** et parlez-moi des problèmes ou des points d’amélioration afin que je puisse effectuer une itération.\n\nVous pouvez également me poser des questions sur la sélection de votre éditeur en [démarrant une session de conversation inline](command:inlineChat.start).\n\nEn savoir plus sur [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) dans [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Ou explorez la [procédure pas à pas Copilot](commande:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "commande:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "commande"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "supportsSlowVariables": true,
+          "requester": {
+            "name": "bastien-joyeau-vinci",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/165775081",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+              "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+              "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/backend/services/books.ts",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 33,
+              "startColumn": 1,
+              "endLineNumber": 66,
+              "endColumn": 1
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1735584596490
+    }
+  ]
+}

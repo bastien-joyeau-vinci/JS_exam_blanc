@@ -1,0 +1,3158 @@
+{
+  "requesterUsername": "bastien-joyeau-vinci",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/165775081",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_6a04863c-4335-4e15-9508-a889a4a81e8f",
+      "message": {
+        "text": "le problème est que ici on essaye de fetch les livres dès le debut, avant d'etre connecté. donc le fetch echoue et apres meme si on se connecte du coup les libres ne seront quand meme pas affichés. Comment faire en sorte que le fetch se fasse quand l'utilisateur s'est connecté ?",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 279
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 280
+            },
+            "text": "le problème est que ici on essaye de fetch les livres dès le debut, avant d'etre connecté. donc le fetch echoue et apres meme si on se connecte du coup les libres ne seront quand meme pas affichés. Comment faire en sorte que le fetch se fasse quand l'utilisateur s'est connecté ?",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "id": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+              "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+              "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+              "scheme": "file"
+            },
+            "name": "index.tsx",
+            "isFile": true,
+            "isDynamic": true
+          },
+          {
+            "id": "vscode.implicit.viewport",
+            "name": "file:book-service.ts",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 20,
+                "endColumn": 23
+              }
+            },
+            "isFile": true,
+            "isDynamic": true,
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "content": {
+            "value": "Collecte des informations sur l’espace de travail",
+            "uris": {}
+          },
+          "kind": "progressTask",
+          "deferred": {
+            "p": {},
+            "d": {
+              "outcome": 0
+            }
+          },
+          "a": {
+            "z": 0,
+            "g": {
+              "threshold": 175,
+              "name": "39944",
+              "h": 0
+            }
+          },
+          "progress": []
+        },
+        {
+          "value": "Pour résoudre ce problème, vous pouvez utiliser un effet (",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "useEffect",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2044,
+                "startColumn": 14,
+                "endLineNumber": 2044,
+                "endColumn": 14
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/node_modules/@types/react/index.d.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/node_modules/%40types/react/index.d.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/node_modules/@types/react/index.d.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "d83bc859-b7c4-4cdf-96e5-009c5f48b758"
+        },
+        {
+          "value": ") qui dépend de l'état de l'utilisateur authentifié. Cela garantira que les livres ne sont récupérés qu'après que l'utilisateur s'est connecté. Voici comment vous pouvez modifier le composant ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "App",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 23,
+                "startColumn": 7,
+                "endLineNumber": 23,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "27d65d25-b6b2-4f83-8456-298719b14689"
+        },
+        {
+          "value": " pour y parvenir :\n\n```tsx\nimport { Outlet } from \"react-router-dom\";\nimport \"./App.css\";\nimport Footer from \"../Footer/Footer\";\nimport Header from \"../Header/Header\";\nimport NavBar from \"../Navbar/Navbar\";\nimport { useEffect, useState } from \"react\";\nimport {\n  AuthenticatedUser,\n  MaybeAuthenticatedUser,\n  Book,\n  BookContext,\n  User,\n} from \"../../types\";\nimport {\n  fetchBooks,\n} from \"../../utils/book-service\";\nimport {\n  clearAuthenticatedUser,\n  getAuthenticatedUser,\n  storeAuthenticatedUser,\n} from \"../../utils/session\";\n\nconst App = () => {\n  const [books, setBooks] = useState<Book[]>([]);\n\n  const [authenticatedUser, setAuthenticatedUser] =\n    useState<MaybeAuthenticatedUser>(undefined);\n\n  const initBooks = async () => {\n    try {\n      const books = await fetchBooks();\n      setBooks(books);\n    } catch (error) {\n      console.error(error);\n    }\n  };\n\n  useEffect(() => {\n    const authenticatedUser = getAuthenticatedUser();\n    if (authenticatedUser) {\n      setAuthenticatedUser(authenticatedUser);\n    }\n  }, []);\n\n  useEffect(() => {\n    if (authenticatedUser) {\n      initBooks();\n    }\n  }, [authenticatedUser]);\n\n  const loginUser = async (user: User) => {\n    try {\n      const options = {\n        method: \"POST\",\n        body: JSON.stringify(user),\n        headers: {\n          \"Content-Type\": \"application/json\",\n        },\n      };\n\n      const response = await fetch(\"http://localhost:3000/auths/login\", options);\n\n      if (!response.ok)\n        throw new Error(\n          `fetch error : ${response.status} : ${response.statusText}`\n        );\n\n      const authenticatedUser: AuthenticatedUser = await response.json();\n      console.log(\"authenticatedUser: \", authenticatedUser);\n\n      setAuthenticatedUser(authenticatedUser);\n      storeAuthenticatedUser(authenticatedUser);\n    } catch (err) {\n      console.error(\"loginUser::error: \", err);\n      throw err;\n    }\n  };\n\n  const clearUser = () => {\n    clearAuthenticatedUser();\n    setAuthenticatedUser(undefined);\n  };\n\n  const bookContext: BookContext = {\n    books,\n    loginUser,\n    authenticatedUser,\n    clearUser,\n  };\n\n  return (\n    <div>\n      <Header>\n        <NavBar />\n      </Header>\n\n      <main className=\"page-content\">\n        <Outlet context={bookContext} />\n      </main>\n\n      <Footer>\n        <p>Bastien Joyeau</p>\n      </Footer>\n    </div>\n  );\n};\n\nexport default App;\n```\n\nAvec cette modification, les livres ne seront récupérés qu'après que l'utilisateur s'est connecté. L'effet ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "useEffect",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2044,
+                "startColumn": 14,
+                "endLineNumber": 2044,
+                "endColumn": 14
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/node_modules/@types/react/index.d.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/node_modules/%40types/react/index.d.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/node_modules/@types/react/index.d.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "11dc4a29-ab46-42c4-b457-d3744e094b6c"
+        },
+        {
+          "value": " qui appelle ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "initBooks",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 29,
+                "startColumn": 9,
+                "endLineNumber": 29,
+                "endColumn": 9
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "d818b200-c4f0-46c6-aae2-3e4072065cff"
+        },
+        {
+          "value": " dépend de ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "authenticatedUser",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 26,
+                "startColumn": 10,
+                "endLineNumber": 26,
+                "endColumn": 10
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "6179255d-8527-42c3-9eb5-6a9981ac9ffe"
+        },
+        {
+          "value": ", donc il ne s'exécutera que lorsque ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "authenticatedUser",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 26,
+                "startColumn": 10,
+                "endLineNumber": 26,
+                "endColumn": 10
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "7ebeb86c-270a-4602-a1ca-fb7a0a786aad"
+        },
+        {
+          "value": " est défini.",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "responseId": "response_54ccd2e4-8acb-48f5-9ccc-577e21b826f3",
+      "isHidden": false,
+      "result": {
+        "timings": {
+          "firstProgress": 1691,
+          "totalElapsed": 15399
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "import { Outlet } from \"react-router-dom\";\nimport \"./App.css\";\nimport Footer from \"../Footer/Footer\";\nimport Header from \"../Header/Header\";\nimport NavBar from \"../Navbar/Navbar\";\nimport { useEffect, useState } from \"react\";\nimport {\n  AuthenticatedUser,\n  MaybeAuthenticatedUser,\n  Book,\n  BookContext,\n  User,\n} from \"../../types\";\nimport {\n  fetchBooks,\n} from \"../../utils/book-service\";\nimport {\n  clearAuthenticatedUser,\n  getAuthenticatedUser,\n  storeAuthenticatedUser,\n} from \"../../utils/session\";\n\nconst App = () => {\n  const [books, setBooks] = useState<Book[]>([]);\n\n  const [authenticatedUser, setAuthenticatedUser] =\n    useState<MaybeAuthenticatedUser>(undefined);\n\n  const initBooks = async () => {\n    try {\n      const books = await fetchBooks();\n      setBooks(books);\n    } catch (error) {\n      console.error(error);\n    }\n  };\n\n  useEffect(() => {\n    const authenticatedUser = getAuthenticatedUser();\n    if (authenticatedUser) {\n      setAuthenticatedUser(authenticatedUser);\n    }\n  }, []);\n\n  useEffect(() => {\n    if (authenticatedUser) {\n      initBooks();\n    }\n  }, [authenticatedUser]);\n\n  const loginUser = async (user: User) => {\n    try {\n      const options = {\n        method: \"POST\",\n        body: JSON.stringify(user),\n        headers: {\n          \"Content-Type\": \"application/json\",\n        },\n      };\n\n      const response = await fetch(\"http://localhost:3000/auths/login\", options);\n\n      if (!response.ok)\n        throw new Error(\n          `fetch error : ${response.status} : ${response.statusText}`\n        );\n\n      const authenticatedUser: AuthenticatedUser = await response.json();\n      console.log(\"authenticatedUser: \", authenticatedUser);\n\n      setAuthenticatedUser(authenticatedUser);\n      storeAuthenticatedUser(authenticatedUser);\n    } catch (err) {\n      console.error(\"loginUser::error: \", err);\n      throw err;\n    }\n  };\n\n  const clearUser = () => {\n    clearAuthenticatedUser();\n    setAuthenticatedUser(undefined);\n  };\n\n  const bookContext: BookContext = {\n    books,\n    loginUser,\n    authenticatedUser,\n    clearUser,\n  };\n\n  return (\n    <div>\n      <Header>\n        <NavBar />\n      </Header>\n\n      <main className=\"page-content\">\n        <Outlet context={bookContext} />\n      </main>\n\n      <Footer>\n        <p>Bastien Joyeau</p>\n      </Footer>\n    </div>\n  );\n};\n\nexport default App;\n",
+              "language": "tsx",
+              "markdownBeforeBlock": "Pour résoudre ce problème, vous pouvez utiliser un effet (`useEffect`) qui dépend de l'état de l'utilisateur authentifié. Cela garantira que les livres ne sont récupérés qu'après que l'utilisateur s'est connecté. Voici comment vous pouvez modifier le composant `App` pour y parvenir :\n\n"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "le problème est que ici on essaye de fetch les livres dès le debut, avant d'etre connecté. donc le fetch echoue et apres meme si on se connecte du coup les libres ne seront quand meme pas affichés. Comment faire en sorte que le fetch se fasse quand l'utilisateur s'est connecté ?"
+            },
+            {
+              "role": "assistant",
+              "content": "Pour résoudre ce problème, vous pouvez utiliser un effet (`useEffect`) qui dépend de l'état de l'utilisateur authentifié. Cela garantira que les livres ne sont récupérés qu'après que l'utilisateur s'est connecté. Voici comment vous pouvez modifier le composant `App` pour y parvenir :\n\n```tsx\nimport { Outlet } from \"react-router-dom\";\nimport \"./App.css\";\nimport Footer from \"../Footer/Footer\";\nimport Header from \"../Header/Header\";\nimport NavBar from \"../Navbar/Navbar\";\nimport { useEffect, useState } from \"react\";\nimport {\n  AuthenticatedUser,\n  MaybeAuthenticatedUser,\n  Book,\n  BookContext,\n  User,\n} from \"../../types\";\nimport {\n  fetchBooks,\n} from \"../../utils/book-service\";\nimport {\n  clearAuthenticatedUser,\n  getAuthenticatedUser,\n  storeAuthenticatedUser,\n} from \"../../utils/session\";\n\nconst App = () => {\n  const [books, setBooks] = useState<Book[]>([]);\n\n  const [authenticatedUser, setAuthenticatedUser] =\n    useState<MaybeAuthenticatedUser>(undefined);\n\n  const initBooks = async () => {\n    try {\n      const books = await fetchBooks();\n      setBooks(books);\n    } catch (error) {\n      console.error(error);\n    }\n  };\n\n  useEffect(() => {\n    const authenticatedUser = getAuthenticatedUser();\n    if (authenticatedUser) {\n      setAuthenticatedUser(authenticatedUser);\n    }\n  }, []);\n\n  useEffect(() => {\n    if (authenticatedUser) {\n      initBooks();\n    }\n  }, [authenticatedUser]);\n\n  const loginUser = async (user: User) => {\n    try {\n      const options = {\n        method: \"POST\",\n        body: JSON.stringify(user),\n        headers: {\n          \"Content-Type\": \"application/json\",\n        },\n      };\n\n      const response = await fetch(\"http://localhost:3000/auths/login\", options);\n\n      if (!response.ok)\n        throw new Error(\n          `fetch error : ${response.status} : ${response.statusText}`\n        );\n\n      const authenticatedUser: AuthenticatedUser = await response.json();\n      console.log(\"authenticatedUser: \", authenticatedUser);\n\n      setAuthenticatedUser(authenticatedUser);\n      storeAuthenticatedUser(authenticatedUser);\n    } catch (err) {\n      console.error(\"loginUser::error: \", err);\n      throw err;\n    }\n  };\n\n  const clearUser = () => {\n    clearAuthenticatedUser();\n    setAuthenticatedUser(undefined);\n  };\n\n  const bookContext: BookContext = {\n    books,\n    loginUser,\n    authenticatedUser,\n    clearUser,\n  };\n\n  return (\n    <div>\n      <Header>\n        <NavBar />\n      </Header>\n\n      <main className=\"page-content\">\n        <Outlet context={bookContext} />\n      </main>\n\n      <Footer>\n        <p>Bastien Joyeau</p>\n      </Footer>\n    </div>\n  );\n};\n\nexport default App;\n```\n\nAvec cette modification, les livres ne seront récupérés qu'après que l'utilisateur s'est connecté. L'effet `useEffect` qui appelle `initBooks` dépend de `authenticatedUser`, donc il ne s'exécutera que lorsque `authenticatedUser` est défini."
+            }
+          ],
+          "modelMessageId": "6c8f0672-ae45-46e1-afc4-17e48f5cddd8",
+          "responseId": "23790c88-aae4-42f7-9979-1c9beb8643ca",
+          "sessionId": "d866bd65-b9a0-4cc1-bff0-288f59a566c9",
+          "agentId": "github.copilot.workspace"
+        }
+      },
+      "followups": [
+        {
+          "kind": "reply",
+          "agentId": "github.copilot.workspace",
+          "message": "Comment gérer les erreurs de fetch ?"
+        }
+      ],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "Posez des questions sur votre espace de travail",
+        "metadata": {
+          "sampleRequest": "Comment faire générer ce projet ?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": true,
+          "isSecondary": true,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "Expliquer le fonctionnement du code dans votre éditeur actif"
+          },
+          {
+            "name": "tests",
+            "description": "Générer des tests unitaires pour le code sélectionné",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Proposer un correctif pour les problèmes dans le code sélectionné",
+            "sampleRequest": "Ce code présente un problème. Réécrivez le code pour l’afficher avec le bogue corrigé."
+          },
+          {
+            "name": "new",
+            "description": "Code de structure pour un nouveau fichier ou projet dans un espace de travail",
+            "sampleRequest": "Créer un serveur d’API RESTful à l’aide de typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete workspace from scratch in Visual Studio Code, such as a new application or Visual Studio Code extension. The user may have specified individual files that you should refer to. The user may have also provided previously used requests, which you can ignore if they are not relevant to the latest user request. Do not use this category to update an existing project or generate individual methods or files.",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "New react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Créer un Jupyter Notebook",
+            "sampleRequest": "Comment faire créer un notebook pour charger des données à partir d’un fichier CSV ?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fixTestFailure",
+            "description": "Proposer un correctif pour le test ayant échoué",
+            "when": "config.github.copilot.chat.fixTestFailure.enabled"
+          },
+          {
+            "name": "setupTests",
+            "description": "Configurer des tests dans votre projet (expérimental)",
+            "sampleRequest": "ajouter des tests playwright à mon projet",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/.gitignore",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/.gitignore",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/.gitignore",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/eslint.config.js",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/eslint.config.js",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/eslint.config.js",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/index.html",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/index.html",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/index.html",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/package.json",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/package.json",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/package.json",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/README.md",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/README.md",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/README.md",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/App.css",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/App.css",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/App.css",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/LibraryPageView.css",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/LibraryPageView.css",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/LibraryPageView.css",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/LibraryPageView.tsx",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/LibraryPageView.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/LibraryPageView.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Footer/Footer.css",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Footer/Footer.css",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Footer/Footer.css",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Footer/Footer.tsx",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Footer/Footer.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Footer/Footer.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Header/Header.css",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Header/Header.css",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Header/Header.css",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Header/Header.tsx",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Header/Header.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Header/Header.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Login/Login.tsx",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Login/Login.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Login/Login.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Navbar/Navbar.tsx",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Navbar/Navbar.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Navbar/Navbar.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/pages/BookPage.tsx",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/pages/BookPage.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/pages/BookPage.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/pages/HomePage.tsx",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/pages/HomePage.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/pages/HomePage.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/pages/LibraryPage.tsx",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/pages/LibraryPage.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/pages/LibraryPage.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/index.css",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/index.css",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/index.css",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/main.tsx",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/main.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/main.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/session.ts",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/session.ts",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/session.ts",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/vite-env.d.ts",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/vite-env.d.ts",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/vite-env.d.ts",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/tsconfig.app.json",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/tsconfig.app.json",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/tsconfig.app.json",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/tsconfig.json",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/tsconfig.json",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/tsconfig.json",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/tsconfig.node.json",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/tsconfig.node.json",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/tsconfig.node.json",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/Examen blanc-20241216/examen_js/exam_web2_template/frontend/src/components/App/App.tsx",
+            "external": "file:///Users/bastienjoyeau/Downloads/Examen%20blanc-20241216/examen_js/exam_web2_template/frontend/src/components/App/App.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/Examen blanc-20241216/examen_js/exam_web2_template/frontend/src/components/App/App.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/Examen blanc-20241216/examen_js/exam_web2_template/frontend/src/types.ts",
+            "external": "file:///Users/bastienjoyeau/Downloads/Examen%20blanc-20241216/examen_js/exam_web2_template/frontend/src/types.ts",
+            "path": "/Users/bastienjoyeau/Downloads/Examen blanc-20241216/examen_js/exam_web2_template/frontend/src/types.ts",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1735580363384
+    },
+    {
+      "requestId": "request_861b4c31-4c32-4fe6-99c6-514d17039510",
+      "message": {
+        "text": "je recois l'erreur 'Unauthorized' a chaque fetch, il doit y avoir un problème avec l'attribution de droits au moment de la connexion de l'utilisateur. Le backend a l'air de bien renvoyer les bonnes autorisations donc c'est ici que ca foire.",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 240
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 241
+            },
+            "text": "je recois l'erreur 'Unauthorized' a chaque fetch, il doit y avoir un problème avec l'attribution de droits au moment de la connexion de l'utilisateur. Le backend a l'air de bien renvoyer les bonnes autorisations donc c'est ici que ca foire.",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "id": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+              "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+              "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+              "scheme": "file"
+            },
+            "name": "book-service.ts",
+            "isFile": true,
+            "isDynamic": true
+          },
+          {
+            "id": "vscode.implicit.viewport",
+            "name": "file:index.tsx",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 82,
+                "startColumn": 1,
+                "endLineNumber": 113,
+                "endColumn": 20
+              }
+            },
+            "isFile": true,
+            "isDynamic": true,
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Il semble que le problème soit lié à l'authentification des requêtes. Vous devez probablement inclure un jeton d'authentification dans les en-têtes de vos requêtes après la connexion de l'utilisateur. Voici comment vous pouvez modifier votre service de récupération des livres pour inclure un jeton d'authentification.\n\nTout d'abord, assurez-vous que le jeton d'authentification est stocké après la connexion de l'utilisateur. Ensuite, modifiez la fonction ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "fetchBooks",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 3,
+                "startColumn": 7,
+                "endLineNumber": 3,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "35ecffcc-fb63-45de-abf8-4dba9831f9c2"
+        },
+        {
+          "value": " pour inclure ce jeton dans les en-têtes de la requête.\n\n### Modification de `loginUser` pour stocker le jeton d'authentification\n\n```typescript\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "const loginUser = async (user: User) => {\n  try {\n    const options = {\n      method: \"POST\",\n      body: JSON.stringify(user),\n      headers: {\n        \"Content-Type\": \"application/json\",\n      },\n    };\n\n    const response = await fetch(\"http://localhost:3000/auths/login\", options);\n\n    if (!response.ok)\n      throw new Error(\n        `fetch error : ${response.status} : ${response.statusText}`\n      );\n\n    const authenticatedUser: AuthenticatedUser = await response.json();\n    console.log(\"authenticatedUser: \", authenticatedUser);\n\n    setAuthenticatedUser(authenticatedUser);\n    storeAuthenticatedUser(authenticatedUser);\n\n    // Store the token in localStorage or a similar storage\n    localStorage.setItem(\"authToken\", authenticatedUser.token);\n  } catch (err) {\n    console.error(\"loginUser::error: \", err);\n    throw err;\n  }\n};\n```\n\n### Modification de ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "fetchBooks",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 3,
+                "startColumn": 7,
+                "endLineNumber": 3,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "68ca3cf0-6ff3-43cc-8e23-9d5873a024c1"
+        },
+        {
+          "value": " pour inclure le jeton d'authentification\n\n```typescript\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "import { Book } from \"../types\";\n\nconst fetchBooks = async (): Promise<Book[]> => {\n  try {\n    const token = localStorage.getItem(\"authToken\");\n    if (!token) {\n      throw new Error(\"No authentication token found\");\n    }\n\n    const response = await fetch(\"http://localhost:3000/books\", {\n      headers: {\n        \"Authorization\": `Bearer ${token}`,\n      },\n    });\n\n    if (!response.ok) {\n      throw new Error(\"Failed to fetch books : \" + response.statusText);\n    }\n\n    const data = await response.json();\n    if (!data || !Array.isArray(data)) {\n      throw new Error(\"Invalid data\");\n    }\n    return data;\n  } catch (error) {\n    console.error(error);\n    throw error;\n  }\n};\n\nexport { fetchBooks };\n```\n\nAvec ces modifications, le jeton d'authentification sera inclus dans les en-têtes de la requête lorsque vous récupérez les livres, ce qui devrait résoudre le problème d'autorisation.",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "responseId": "response_1f61ccc7-6032-495c-9b18-1039f6d55c1c",
+      "isHidden": false,
+      "result": {
+        "timings": {
+          "firstProgress": 1434,
+          "totalElapsed": 6329
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "const loginUser = async (user: User) => {\n  try {\n    const options = {\n      method: \"POST\",\n      body: JSON.stringify(user),\n      headers: {\n        \"Content-Type\": \"application/json\",\n      },\n    };\n\n    const response = await fetch(\"http://localhost:3000/auths/login\", options);\n\n    if (!response.ok)\n      throw new Error(\n        `fetch error : ${response.status} : ${response.statusText}`\n      );\n\n    const authenticatedUser: AuthenticatedUser = await response.json();\n    console.log(\"authenticatedUser: \", authenticatedUser);\n\n    setAuthenticatedUser(authenticatedUser);\n    storeAuthenticatedUser(authenticatedUser);\n\n    // Store the token in localStorage or a similar storage\n    localStorage.setItem(\"authToken\", authenticatedUser.token);\n  } catch (err) {\n    console.error(\"loginUser::error: \", err);\n    throw err;\n  }\n};\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "scheme": "file"
+              },
+              "language": "typescript",
+              "markdownBeforeBlock": "Il semble que le problème soit lié à l'authentification des requêtes. Vous devez probablement inclure un jeton d'authentification dans les en-têtes de vos requêtes après la connexion de l'utilisateur. Voici comment vous pouvez modifier votre service de récupération des livres pour inclure un jeton d'authentification.\n\nTout d'abord, assurez-vous que le jeton d'authentification est stocké après la connexion de l'utilisateur. Ensuite, modifiez la fonction `fetchBooks` pour inclure ce jeton dans les en-têtes de la requête.\n\n### Modification de `loginUser` pour stocker le jeton d'authentification\n\n"
+            },
+            {
+              "code": "import { Book } from \"../types\";\n\nconst fetchBooks = async (): Promise<Book[]> => {\n  try {\n    const token = localStorage.getItem(\"authToken\");\n    if (!token) {\n      throw new Error(\"No authentication token found\");\n    }\n\n    const response = await fetch(\"http://localhost:3000/books\", {\n      headers: {\n        \"Authorization\": `Bearer ${token}`,\n      },\n    });\n\n    if (!response.ok) {\n      throw new Error(\"Failed to fetch books : \" + response.statusText);\n    }\n\n    const data = await response.json();\n    if (!data || !Array.isArray(data)) {\n      throw new Error(\"Invalid data\");\n    }\n    return data;\n  } catch (error) {\n    console.error(error);\n    throw error;\n  }\n};\n\nexport { fetchBooks };\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+                "scheme": "file"
+              },
+              "language": "typescript",
+              "markdownBeforeBlock": "\n### Modification de `fetchBooks` pour inclure le jeton d'authentification\n\n"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "je recois l'erreur 'Unauthorized' a chaque fetch, il doit y avoir un problème avec l'attribution de droits au moment de la connexion de l'utilisateur. Le backend a l'air de bien renvoyer les bonnes autorisations donc c'est ici que ca foire."
+            },
+            {
+              "role": "assistant",
+              "content": "Il semble que le problème soit lié à l'authentification des requêtes. Vous devez probablement inclure un jeton d'authentification dans les en-têtes de vos requêtes après la connexion de l'utilisateur. Voici comment vous pouvez modifier votre service de récupération des livres pour inclure un jeton d'authentification.\n\nTout d'abord, assurez-vous que le jeton d'authentification est stocké après la connexion de l'utilisateur. Ensuite, modifiez la fonction `fetchBooks` pour inclure ce jeton dans les en-têtes de la requête.\n\n### Modification de `loginUser` pour stocker le jeton d'authentification\n\n```typescript\n// filepath: /Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx\nconst loginUser = async (user: User) => {\n  try {\n    const options = {\n      method: \"POST\",\n      body: JSON.stringify(user),\n      headers: {\n        \"Content-Type\": \"application/json\",\n      },\n    };\n\n    const response = await fetch(\"http://localhost:3000/auths/login\", options);\n\n    if (!response.ok)\n      throw new Error(\n        `fetch error : ${response.status} : ${response.statusText}`\n      );\n\n    const authenticatedUser: AuthenticatedUser = await response.json();\n    console.log(\"authenticatedUser: \", authenticatedUser);\n\n    setAuthenticatedUser(authenticatedUser);\n    storeAuthenticatedUser(authenticatedUser);\n\n    // Store the token in localStorage or a similar storage\n    localStorage.setItem(\"authToken\", authenticatedUser.token);\n  } catch (err) {\n    console.error(\"loginUser::error: \", err);\n    throw err;\n  }\n};\n```\n\n### Modification de `fetchBooks` pour inclure le jeton d'authentification\n\n```typescript\n// filepath: /Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts\nimport { Book } from \"../types\";\n\nconst fetchBooks = async (): Promise<Book[]> => {\n  try {\n    const token = localStorage.getItem(\"authToken\");\n    if (!token) {\n      throw new Error(\"No authentication token found\");\n    }\n\n    const response = await fetch(\"http://localhost:3000/books\", {\n      headers: {\n        \"Authorization\": `Bearer ${token}`,\n      },\n    });\n\n    if (!response.ok) {\n      throw new Error(\"Failed to fetch books : \" + response.statusText);\n    }\n\n    const data = await response.json();\n    if (!data || !Array.isArray(data)) {\n      throw new Error(\"Invalid data\");\n    }\n    return data;\n  } catch (error) {\n    console.error(error);\n    throw error;\n  }\n};\n\nexport { fetchBooks };\n```\n\nAvec ces modifications, le jeton d'authentification sera inclus dans les en-têtes de la requête lorsque vous récupérez les livres, ce qui devrait résoudre le problème d'autorisation."
+            }
+          ],
+          "modelMessageId": "7d6d2134-3ee0-4824-a85a-acc9d6dc842f",
+          "responseId": "48ce0b72-f60b-4117-be09-54b15dddc787",
+          "sessionId": "9e753360-24e8-483b-9f6c-cba69600b696",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Demander à Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "Vous pouvez me poser des questions générales sur la programmation ou converser avec les participants suivants qui ont une expertise spécialisée et peuvent effectuer les actions suivantes :",
+          "helpTextVariablesPrefix": "Vous pouvez également m’aider à comprendre votre question en utilisant les variables suivantes pour me donner un contexte supplémentaire :",
+          "helpTextPostfix": {
+            "value": "Pour avoir une conversation intéressante, posez-moi des questions comme si j’étais un vrai programmeur :\n\n* **Montrez-moi le code** dont vous voulez parler en ouvrant les fichiers et en sélectionnant les lignes les plus importantes.\n* **Apportez des améliorations** en me posant des questions de suivi, en ajoutant des clarifications, en fournissant des erreurs, etc.\n* **Passez en revue mon code suggéré** et parlez-moi des problèmes ou des points d’amélioration afin que je puisse effectuer une itération.\n\nVous pouvez également me poser des questions sur la sélection de votre éditeur en [démarrant une session de conversation inline](command:inlineChat.start).\n\nEn savoir plus sur [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) dans [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Ou explorez la [procédure pas à pas Copilot](commande:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "commande:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "commande"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "supportsSlowVariables": true,
+          "requester": {
+            "name": "bastien-joyeau-vinci",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/165775081",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+              "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+              "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 82,
+              "startColumn": 1,
+              "endLineNumber": 113,
+              "endColumn": 20
+            }
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1735581352788
+    },
+    {
+      "requestId": "request_dc319403-4486-4bc2-b2ef-4c2d6af06975",
+      "message": {
+        "text": "non, ca ne marche toujours pas (unauthorized)",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 45
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 46
+            },
+            "text": "non, ca ne marche toujours pas (unauthorized)",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "id": "vscode.implicit.viewport",
+            "name": "file:index.tsx",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 48,
+                "startColumn": 1,
+                "endLineNumber": 82,
+                "endColumn": 30
+              }
+            },
+            "isFile": true,
+            "isDynamic": true,
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Pour résoudre le problème d'autorisation, nous devons nous assurer que le jeton d'authentification est correctement stocké et inclus dans les en-têtes de toutes les requêtes nécessitant une authentification. Voici les étapes à suivre :\n\n1. **Stocker le jeton d'authentification après la connexion de l'utilisateur.**\n2. **Inclure le jeton d'authentification dans les en-têtes de la requête pour récupérer les livres.**\n\n### Modification de ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "loginUser",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 53,
+                "startColumn": 9,
+                "endLineNumber": 53,
+                "endColumn": 9
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "ab3ed719-caba-47c0-aab5-451fdec5f693"
+        },
+        {
+          "value": " pour stocker le jeton d'authentification\n\n```typescript\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "const loginUser = async (user: User) => {\n  try {\n    const options = {\n      method: \"POST\",\n      body: JSON.stringify(user),\n      headers: {\n        \"Content-Type\": \"application/json\",\n      },\n    };\n\n    const response = await fetch(\"http://localhost:3000/auths/login\", options);\n\n    if (!response.ok)\n      throw new Error(\n        `fetch error : ${response.status} : ${response.statusText}`\n      );\n\n    const authenticatedUser: AuthenticatedUser = await response.json();\n    console.log(\"authenticatedUser: \", authenticatedUser);\n\n    setAuthenticatedUser(authenticatedUser);\n    storeAuthenticatedUser(authenticatedUser);\n\n    // Store the token in localStorage or a similar storage\n    localStorage.setItem(\"authToken\", authenticatedUser.token);\n  } catch (err) {\n    console.error(\"loginUser::error: \", err);\n    throw err;\n  }\n};\n```\n\n### Modification de `fetchBooks` pour inclure le jeton d'authentification\n\n```typescript\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "import { Book } from \"../types\";\n\nconst fetchBooks = async (): Promise<Book[]> => {\n  try {\n    const token = localStorage.getItem(\"authToken\");\n    if (!token) {\n      throw new Error(\"No authentication token found\");\n    }\n\n    const response = await fetch(\"http://localhost:3000/books\", {\n      headers: {\n        \"Authorization\": `Bearer ${token}`,\n      },\n    });\n\n    if (!response.ok) {\n      throw new Error(\"Failed to fetch books : \" + response.statusText);\n    }\n\n    const data = await response.json();\n    if (!data || !Array.isArray(data)) {\n      throw new Error(\"Invalid data\");\n    }\n    return data;\n  } catch (error) {\n    console.error(error);\n    throw error;\n  }\n};\n\nexport { fetchBooks };\n```\n\n### Vérification de l'état de connexion avant de récupérer les livres\n\nAssurez-vous que les livres ne sont récupérés qu'après que l'utilisateur est connecté :\n\n```typescript\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "useEffect(() => {\n  if (authenticatedUser) {\n    initBooks();\n  }\n}, [authenticatedUser]);\n```\n\nAvec ces modifications, le jeton d'authentification sera inclus dans les en-têtes de la requête lorsque vous récupérez les livres, ce qui devrait résoudre le problème d'autorisation.",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "responseId": "response_91a0bf7f-2120-4f04-baec-f788fc166c39",
+      "isHidden": false,
+      "result": {
+        "timings": {
+          "firstProgress": 1254,
+          "totalElapsed": 6811
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "const loginUser = async (user: User) => {\n  try {\n    const options = {\n      method: \"POST\",\n      body: JSON.stringify(user),\n      headers: {\n        \"Content-Type\": \"application/json\",\n      },\n    };\n\n    const response = await fetch(\"http://localhost:3000/auths/login\", options);\n\n    if (!response.ok)\n      throw new Error(\n        `fetch error : ${response.status} : ${response.statusText}`\n      );\n\n    const authenticatedUser: AuthenticatedUser = await response.json();\n    console.log(\"authenticatedUser: \", authenticatedUser);\n\n    setAuthenticatedUser(authenticatedUser);\n    storeAuthenticatedUser(authenticatedUser);\n\n    // Store the token in localStorage or a similar storage\n    localStorage.setItem(\"authToken\", authenticatedUser.token);\n  } catch (err) {\n    console.error(\"loginUser::error: \", err);\n    throw err;\n  }\n};\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "scheme": "file"
+              },
+              "language": "typescript",
+              "markdownBeforeBlock": "Pour résoudre le problème d'autorisation, nous devons nous assurer que le jeton d'authentification est correctement stocké et inclus dans les en-têtes de toutes les requêtes nécessitant une authentification. Voici les étapes à suivre :\n\n1. **Stocker le jeton d'authentification après la connexion de l'utilisateur.**\n2. **Inclure le jeton d'authentification dans les en-têtes de la requête pour récupérer les livres.**\n\n### Modification de `loginUser` pour stocker le jeton d'authentification\n\n"
+            },
+            {
+              "code": "import { Book } from \"../types\";\n\nconst fetchBooks = async (): Promise<Book[]> => {\n  try {\n    const token = localStorage.getItem(\"authToken\");\n    if (!token) {\n      throw new Error(\"No authentication token found\");\n    }\n\n    const response = await fetch(\"http://localhost:3000/books\", {\n      headers: {\n        \"Authorization\": `Bearer ${token}`,\n      },\n    });\n\n    if (!response.ok) {\n      throw new Error(\"Failed to fetch books : \" + response.statusText);\n    }\n\n    const data = await response.json();\n    if (!data || !Array.isArray(data)) {\n      throw new Error(\"Invalid data\");\n    }\n    return data;\n  } catch (error) {\n    console.error(error);\n    throw error;\n  }\n};\n\nexport { fetchBooks };\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+                "scheme": "file"
+              },
+              "language": "typescript",
+              "markdownBeforeBlock": "\n### Modification de `fetchBooks` pour inclure le jeton d'authentification\n\n"
+            },
+            {
+              "code": "useEffect(() => {\n  if (authenticatedUser) {\n    initBooks();\n  }\n}, [authenticatedUser]);\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "scheme": "file"
+              },
+              "language": "typescript",
+              "markdownBeforeBlock": "\n### Vérification de l'état de connexion avant de récupérer les livres\n\nAssurez-vous que les livres ne sont récupérés qu'après que l'utilisateur est connecté :\n\n"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "non, ca ne marche toujours pas (unauthorized)"
+            },
+            {
+              "role": "assistant",
+              "content": "Pour résoudre le problème d'autorisation, nous devons nous assurer que le jeton d'authentification est correctement stocké et inclus dans les en-têtes de toutes les requêtes nécessitant une authentification. Voici les étapes à suivre :\n\n1. **Stocker le jeton d'authentification après la connexion de l'utilisateur.**\n2. **Inclure le jeton d'authentification dans les en-têtes de la requête pour récupérer les livres.**\n\n### Modification de `loginUser` pour stocker le jeton d'authentification\n\n```typescript\n// filepath: /Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx\nconst loginUser = async (user: User) => {\n  try {\n    const options = {\n      method: \"POST\",\n      body: JSON.stringify(user),\n      headers: {\n        \"Content-Type\": \"application/json\",\n      },\n    };\n\n    const response = await fetch(\"http://localhost:3000/auths/login\", options);\n\n    if (!response.ok)\n      throw new Error(\n        `fetch error : ${response.status} : ${response.statusText}`\n      );\n\n    const authenticatedUser: AuthenticatedUser = await response.json();\n    console.log(\"authenticatedUser: \", authenticatedUser);\n\n    setAuthenticatedUser(authenticatedUser);\n    storeAuthenticatedUser(authenticatedUser);\n\n    // Store the token in localStorage or a similar storage\n    localStorage.setItem(\"authToken\", authenticatedUser.token);\n  } catch (err) {\n    console.error(\"loginUser::error: \", err);\n    throw err;\n  }\n};\n```\n\n### Modification de `fetchBooks` pour inclure le jeton d'authentification\n\n```typescript\n// filepath: /Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts\nimport { Book } from \"../types\";\n\nconst fetchBooks = async (): Promise<Book[]> => {\n  try {\n    const token = localStorage.getItem(\"authToken\");\n    if (!token) {\n      throw new Error(\"No authentication token found\");\n    }\n\n    const response = await fetch(\"http://localhost:3000/books\", {\n      headers: {\n        \"Authorization\": `Bearer ${token}`,\n      },\n    });\n\n    if (!response.ok) {\n      throw new Error(\"Failed to fetch books : \" + response.statusText);\n    }\n\n    const data = await response.json();\n    if (!data || !Array.isArray(data)) {\n      throw new Error(\"Invalid data\");\n    }\n    return data;\n  } catch (error) {\n    console.error(error);\n    throw error;\n  }\n};\n\nexport { fetchBooks };\n```\n\n### Vérification de l'état de connexion avant de récupérer les livres\n\nAssurez-vous que les livres ne sont récupérés qu'après que l'utilisateur est connecté :\n\n```typescript\n// filepath: /Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx\nuseEffect(() => {\n  if (authenticatedUser) {\n    initBooks();\n  }\n}, [authenticatedUser]);\n```\n\nAvec ces modifications, le jeton d'authentification sera inclus dans les en-têtes de la requête lorsque vous récupérez les livres, ce qui devrait résoudre le problème d'autorisation."
+            }
+          ],
+          "modelMessageId": "ee915ff4-9f30-435d-9024-da5237190bfd",
+          "responseId": "b1a4b6fd-d68e-48c7-89f3-aabded094680",
+          "sessionId": "9e753360-24e8-483b-9f6c-cba69600b696",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Demander à Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "Vous pouvez me poser des questions générales sur la programmation ou converser avec les participants suivants qui ont une expertise spécialisée et peuvent effectuer les actions suivantes :",
+          "helpTextVariablesPrefix": "Vous pouvez également m’aider à comprendre votre question en utilisant les variables suivantes pour me donner un contexte supplémentaire :",
+          "helpTextPostfix": {
+            "value": "Pour avoir une conversation intéressante, posez-moi des questions comme si j’étais un vrai programmeur :\n\n* **Montrez-moi le code** dont vous voulez parler en ouvrant les fichiers et en sélectionnant les lignes les plus importantes.\n* **Apportez des améliorations** en me posant des questions de suivi, en ajoutant des clarifications, en fournissant des erreurs, etc.\n* **Passez en revue mon code suggéré** et parlez-moi des problèmes ou des points d’amélioration afin que je puisse effectuer une itération.\n\nVous pouvez également me poser des questions sur la sélection de votre éditeur en [démarrant une session de conversation inline](command:inlineChat.start).\n\nEn savoir plus sur [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) dans [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Ou explorez la [procédure pas à pas Copilot](commande:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "commande:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "commande"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "supportsSlowVariables": true,
+          "requester": {
+            "name": "bastien-joyeau-vinci",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/165775081",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+              "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+              "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 48,
+              "startColumn": 1,
+              "endLineNumber": 82,
+              "endColumn": 30
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1735581524448
+    },
+    {
+      "requestId": "request_96f12cbd-ad82-40b5-af14-738021a46865",
+      "message": {
+        "text": "401 encore et encore",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 20
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 21
+            },
+            "text": "401 encore et encore",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "id": "vscode.implicit.viewport",
+            "name": "file:index.tsx",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 32,
+                "startColumn": 1,
+                "endLineNumber": 66,
+                "endColumn": 25
+              }
+            },
+            "isFile": true,
+            "isDynamic": true,
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Pour résoudre le problème de l'erreur 401 (Unauthorized), nous devons nous assurer que le jeton d'authentification est correctement stocké et inclus dans les en-têtes de toutes les requêtes nécessitant une authentification. Voici les étapes à suivre :\n\n1. **Vérifiez que le jeton est correctement stocké après la connexion.**\n2. **Assurez-vous que le jeton est inclus dans les en-têtes de la requête pour récupérer les livres.**\n3. **Vérifiez que le jeton est valide et n'a pas expiré.**\n\n### Vérification et stockage du jeton d'authentification\n\nAssurez-vous que le jeton est correctement stocké après la connexion de l'utilisateur :\n\n```typescript\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "const loginUser = async (user: User) => {\n  try {\n    const options = {\n      method: \"POST\",\n      body: JSON.stringify(user),\n      headers: {\n        \"Content-Type\": \"application/json\",\n      },\n    };\n\n    const response = await fetch(\"http://localhost:3000/auths/login\", options);\n\n    if (!response.ok)\n      throw new Error(\n        `fetch error : ${response.status} : ${response.statusText}`\n      );\n\n    const authenticatedUser: AuthenticatedUser = await response.json();\n    console.log(\"authenticatedUser: \", authenticatedUser);\n\n    setAuthenticatedUser(authenticatedUser);\n    storeAuthenticatedUser(authenticatedUser);\n\n    // Store the token in localStorage or a similar storage\n    localStorage.setItem(\"authToken\", authenticatedUser.token);\n  } catch (err) {\n    console.error(\"loginUser::error: \", err);\n    throw err;\n  }\n};\n```\n\n### Inclusion du jeton d'authentification dans les en-têtes de la requête\n\nAssurez-vous que le jeton est inclus dans les en-têtes de la requête pour récupérer les livres :\n\n```typescript\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "import { Book } from \"../types\";\n\nconst fetchBooks = async (): Promise<Book[]> => {\n  try {\n    const token = localStorage.getItem(\"authToken\");\n    if (!token) {\n      throw new Error(\"No authentication token found\");\n    }\n\n    const response = await fetch(\"http://localhost:3000/books\", {\n      headers: {\n        \"Authorization\": `Bearer ${token}`,\n      },\n    });\n\n    if (!response.ok) {\n      throw new Error(\"Failed to fetch books : \" + response.statusText);\n    }\n\n    const data = await response.json();\n    if (!data || !Array.isArray(data)) {\n      throw new Error(\"Invalid data\");\n    }\n    return data;\n  } catch (error) {\n    console.error(error);\n    throw error;\n  }\n};\n\nexport { fetchBooks };\n```\n\n### Vérification de l'état de connexion avant de récupérer les livres\n\nAssurez-vous que les livres ne sont récupérés qu'après que l'utilisateur est connecté :\n\n```typescript\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "useEffect(() => {\n  if (authenticatedUser) {\n    initBooks();\n  }\n}, [authenticatedUser]);\n```\n\n### Débogage supplémentaire\n\nAjoutez des logs pour vérifier que le jeton est correctement récupéré et inclus dans les en-têtes de la requête :\n\n```typescript\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "import { Book } from \"../types\";\n\nconst fetchBooks = async (): Promise<Book[]> => {\n  try {\n    const token = localStorage.getItem(\"authToken\");\n    console.log(\"Token:\", token); // Ajoutez ce log pour vérifier le jeton\n    if (!token) {\n      throw new Error(\"No authentication token found\");\n    }\n\n    const response = await fetch(\"http://localhost:3000/books\", {\n      headers: {\n        \"Authorization\": `Bearer ${token}`,\n      },\n    });\n\n    console.log(\"Response status:\", response.status); // Ajoutez ce log pour vérifier le statut de la réponse\n\n    if (!response.ok) {\n      throw new Error(\"Failed to fetch books : \" + response.statusText);\n    }\n\n    const data = await response.json();\n    if (!data || !Array.isArray(data)) {\n      throw new Error(\"Invalid data\");\n    }\n    return data;\n  } catch (error) {\n    console.error(error);\n    throw error;\n  }\n};\n\nexport { fetchBooks };\n```\n\nAvec ces modifications et les logs supplémentaires, vous devriez être en mesure de diagnostiquer pourquoi vous recevez une erreur 401 et de résoudre le problème.",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "responseId": "response_b9db4a8c-27ec-4f15-a8ea-19284ec2b269",
+      "isHidden": false,
+      "result": {
+        "timings": {
+          "firstProgress": 1659,
+          "totalElapsed": 10059
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "const loginUser = async (user: User) => {\n  try {\n    const options = {\n      method: \"POST\",\n      body: JSON.stringify(user),\n      headers: {\n        \"Content-Type\": \"application/json\",\n      },\n    };\n\n    const response = await fetch(\"http://localhost:3000/auths/login\", options);\n\n    if (!response.ok)\n      throw new Error(\n        `fetch error : ${response.status} : ${response.statusText}`\n      );\n\n    const authenticatedUser: AuthenticatedUser = await response.json();\n    console.log(\"authenticatedUser: \", authenticatedUser);\n\n    setAuthenticatedUser(authenticatedUser);\n    storeAuthenticatedUser(authenticatedUser);\n\n    // Store the token in localStorage or a similar storage\n    localStorage.setItem(\"authToken\", authenticatedUser.token);\n  } catch (err) {\n    console.error(\"loginUser::error: \", err);\n    throw err;\n  }\n};\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "scheme": "file"
+              },
+              "language": "typescript",
+              "markdownBeforeBlock": "Pour résoudre le problème de l'erreur 401 (Unauthorized), nous devons nous assurer que le jeton d'authentification est correctement stocké et inclus dans les en-têtes de toutes les requêtes nécessitant une authentification. Voici les étapes à suivre :\n\n1. **Vérifiez que le jeton est correctement stocké après la connexion.**\n2. **Assurez-vous que le jeton est inclus dans les en-têtes de la requête pour récupérer les livres.**\n3. **Vérifiez que le jeton est valide et n'a pas expiré.**\n\n### Vérification et stockage du jeton d'authentification\n\nAssurez-vous que le jeton est correctement stocké après la connexion de l'utilisateur :\n\n"
+            },
+            {
+              "code": "import { Book } from \"../types\";\n\nconst fetchBooks = async (): Promise<Book[]> => {\n  try {\n    const token = localStorage.getItem(\"authToken\");\n    if (!token) {\n      throw new Error(\"No authentication token found\");\n    }\n\n    const response = await fetch(\"http://localhost:3000/books\", {\n      headers: {\n        \"Authorization\": `Bearer ${token}`,\n      },\n    });\n\n    if (!response.ok) {\n      throw new Error(\"Failed to fetch books : \" + response.statusText);\n    }\n\n    const data = await response.json();\n    if (!data || !Array.isArray(data)) {\n      throw new Error(\"Invalid data\");\n    }\n    return data;\n  } catch (error) {\n    console.error(error);\n    throw error;\n  }\n};\n\nexport { fetchBooks };\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+                "scheme": "file"
+              },
+              "language": "typescript",
+              "markdownBeforeBlock": "\n### Inclusion du jeton d'authentification dans les en-têtes de la requête\n\nAssurez-vous que le jeton est inclus dans les en-têtes de la requête pour récupérer les livres :\n\n"
+            },
+            {
+              "code": "useEffect(() => {\n  if (authenticatedUser) {\n    initBooks();\n  }\n}, [authenticatedUser]);\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+                "scheme": "file"
+              },
+              "language": "typescript",
+              "markdownBeforeBlock": "\n### Vérification de l'état de connexion avant de récupérer les livres\n\nAssurez-vous que les livres ne sont récupérés qu'après que l'utilisateur est connecté :\n\n"
+            },
+            {
+              "code": "import { Book } from \"../types\";\n\nconst fetchBooks = async (): Promise<Book[]> => {\n  try {\n    const token = localStorage.getItem(\"authToken\");\n    console.log(\"Token:\", token); // Ajoutez ce log pour vérifier le jeton\n    if (!token) {\n      throw new Error(\"No authentication token found\");\n    }\n\n    const response = await fetch(\"http://localhost:3000/books\", {\n      headers: {\n        \"Authorization\": `Bearer ${token}`,\n      },\n    });\n\n    console.log(\"Response status:\", response.status); // Ajoutez ce log pour vérifier le statut de la réponse\n\n    if (!response.ok) {\n      throw new Error(\"Failed to fetch books : \" + response.statusText);\n    }\n\n    const data = await response.json();\n    if (!data || !Array.isArray(data)) {\n      throw new Error(\"Invalid data\");\n    }\n    return data;\n  } catch (error) {\n    console.error(error);\n    throw error;\n  }\n};\n\nexport { fetchBooks };\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts",
+                "scheme": "file"
+              },
+              "language": "typescript",
+              "markdownBeforeBlock": "\n### Débogage supplémentaire\n\nAjoutez des logs pour vérifier que le jeton est correctement récupéré et inclus dans les en-têtes de la requête :\n\n"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "401 encore et encore"
+            },
+            {
+              "role": "assistant",
+              "content": "Pour résoudre le problème de l'erreur 401 (Unauthorized), nous devons nous assurer que le jeton d'authentification est correctement stocké et inclus dans les en-têtes de toutes les requêtes nécessitant une authentification. Voici les étapes à suivre :\n\n1. **Vérifiez que le jeton est correctement stocké après la connexion.**\n2. **Assurez-vous que le jeton est inclus dans les en-têtes de la requête pour récupérer les livres.**\n3. **Vérifiez que le jeton est valide et n'a pas expiré.**\n\n### Vérification et stockage du jeton d'authentification\n\nAssurez-vous que le jeton est correctement stocké après la connexion de l'utilisateur :\n\n```typescript\n// filepath: /Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx\nconst loginUser = async (user: User) => {\n  try {\n    const options = {\n      method: \"POST\",\n      body: JSON.stringify(user),\n      headers: {\n        \"Content-Type\": \"application/json\",\n      },\n    };\n\n    const response = await fetch(\"http://localhost:3000/auths/login\", options);\n\n    if (!response.ok)\n      throw new Error(\n        `fetch error : ${response.status} : ${response.statusText}`\n      );\n\n    const authenticatedUser: AuthenticatedUser = await response.json();\n    console.log(\"authenticatedUser: \", authenticatedUser);\n\n    setAuthenticatedUser(authenticatedUser);\n    storeAuthenticatedUser(authenticatedUser);\n\n    // Store the token in localStorage or a similar storage\n    localStorage.setItem(\"authToken\", authenticatedUser.token);\n  } catch (err) {\n    console.error(\"loginUser::error: \", err);\n    throw err;\n  }\n};\n```\n\n### Inclusion du jeton d'authentification dans les en-têtes de la requête\n\nAssurez-vous que le jeton est inclus dans les en-têtes de la requête pour récupérer les livres :\n\n```typescript\n// filepath: /Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts\nimport { Book } from \"../types\";\n\nconst fetchBooks = async (): Promise<Book[]> => {\n  try {\n    const token = localStorage.getItem(\"authToken\");\n    if (!token) {\n      throw new Error(\"No authentication token found\");\n    }\n\n    const response = await fetch(\"http://localhost:3000/books\", {\n      headers: {\n        \"Authorization\": `Bearer ${token}`,\n      },\n    });\n\n    if (!response.ok) {\n      throw new Error(\"Failed to fetch books : \" + response.statusText);\n    }\n\n    const data = await response.json();\n    if (!data || !Array.isArray(data)) {\n      throw new Error(\"Invalid data\");\n    }\n    return data;\n  } catch (error) {\n    console.error(error);\n    throw error;\n  }\n};\n\nexport { fetchBooks };\n```\n\n### Vérification de l'état de connexion avant de récupérer les livres\n\nAssurez-vous que les livres ne sont récupérés qu'après que l'utilisateur est connecté :\n\n```typescript\n// filepath: /Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx\nuseEffect(() => {\n  if (authenticatedUser) {\n    initBooks();\n  }\n}, [authenticatedUser]);\n```\n\n### Débogage supplémentaire\n\nAjoutez des logs pour vérifier que le jeton est correctement récupéré et inclus dans les en-têtes de la requête :\n\n```typescript\n// filepath: /Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/utils/book-service.ts\nimport { Book } from \"../types\";\n\nconst fetchBooks = async (): Promise<Book[]> => {\n  try {\n    const token = localStorage.getItem(\"authToken\");\n    console.log(\"Token:\", token); // Ajoutez ce log pour vérifier le jeton\n    if (!token) {\n      throw new Error(\"No authentication token found\");\n    }\n\n    const response = await fetch(\"http://localhost:3000/books\", {\n      headers: {\n        \"Authorization\": `Bearer ${token}`,\n      },\n    });\n\n    console.log(\"Response status:\", response.status); // Ajoutez ce log pour vérifier le statut de la réponse\n\n    if (!response.ok) {\n      throw new Error(\"Failed to fetch books : \" + response.statusText);\n    }\n\n    const data = await response.json();\n    if (!data || !Array.isArray(data)) {\n      throw new Error(\"Invalid data\");\n    }\n    return data;\n  } catch (error) {\n    console.error(error);\n    throw error;\n  }\n};\n\nexport { fetchBooks };\n```\n\nAvec ces modifications et les logs supplémentaires, vous devriez être en mesure de diagnostiquer pourquoi vous recevez une erreur 401 et de résoudre le problème."
+            }
+          ],
+          "modelMessageId": "4686d555-4bb0-4cc4-9dc4-03b56bb19a4d",
+          "responseId": "b8a68196-203e-4b00-961e-da19029478c8",
+          "sessionId": "9e753360-24e8-483b-9f6c-cba69600b696",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Demander à Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "Vous pouvez me poser des questions générales sur la programmation ou converser avec les participants suivants qui ont une expertise spécialisée et peuvent effectuer les actions suivantes :",
+          "helpTextVariablesPrefix": "Vous pouvez également m’aider à comprendre votre question en utilisant les variables suivantes pour me donner un contexte supplémentaire :",
+          "helpTextPostfix": {
+            "value": "Pour avoir une conversation intéressante, posez-moi des questions comme si j’étais un vrai programmeur :\n\n* **Montrez-moi le code** dont vous voulez parler en ouvrant les fichiers et en sélectionnant les lignes les plus importantes.\n* **Apportez des améliorations** en me posant des questions de suivi, en ajoutant des clarifications, en fournissant des erreurs, etc.\n* **Passez en revue mon code suggéré** et parlez-moi des problèmes ou des points d’amélioration afin que je puisse effectuer une itération.\n\nVous pouvez également me poser des questions sur la sélection de votre éditeur en [démarrant une session de conversation inline](command:inlineChat.start).\n\nEn savoir plus sur [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) dans [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Ou explorez la [procédure pas à pas Copilot](commande:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "commande:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "commande"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "supportsSlowVariables": true,
+          "requester": {
+            "name": "bastien-joyeau-vinci",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/165775081",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+              "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+              "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/App/index.tsx",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 32,
+              "startColumn": 1,
+              "endLineNumber": 66,
+              "endColumn": 25
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1735581619509
+    },
+    {
+      "requestId": "request_39dbab36-6e5d-49fc-90dc-d5ce1fecda99",
+      "message": {
+        "text": "si la cover est undifiened on affiche l'image qui est dans assets/cover.jpg",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 75
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 76
+            },
+            "text": "si la cover est undifiened on affiche l'image qui est dans assets/cover.jpg",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "id": "vscode.implicit.viewport",
+            "name": "file:BookPageView.tsx",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 31,
+                "endColumn": 25
+              }
+            },
+            "isFile": true,
+            "isDynamic": true,
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Pour afficher une image par défaut lorsque la couverture du livre est indéfinie, vous pouvez modifier le composant ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "BookCard",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 6,
+                "startColumn": 7,
+                "endLineNumber": 6,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "6c0c44f3-4ffc-4059-8371-07a1d4706304"
+        },
+        {
+          "value": " pour utiliser une image de secours. Voici comment vous pouvez le faire :\n\n```tsx\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "import { Book } from \"../../types\";\nimport defaultCover from \"../../assets/cover.jpg\"; // Importez l'image par défaut\n\ninterface BookProps {\n  book: Book;\n}\n\nconst BookCard = ({ book }: BookProps) => {\n  return (\n    <div className=\"card\">\n      <div className=\"card-body\">\n        <h3 className=\"card-title\">{book.title}</h3>\n        <img\n          src={book.cover || defaultCover} // Utilisez l'image par défaut si book.cover est indéfini\n          className=\"card-img-top\"\n          alt={book.title}\n        />\n        <p className=\"card-text\">\n          <strong>Author:</strong> {book.author}\n        </p>\n        <p className=\"card-text\">\n          <strong>Year:</strong> {book.year}\n        </p>\n      </div>\n    </div>\n  );\n};\n\nexport default BookCard;\n```\n\nAvec cette modification, si ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "book.cover",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 3,
+                "startColumn": 3,
+                "endLineNumber": 3,
+                "endColumn": 3
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "19639f2b-7ad2-4e8b-9f1b-4bfbe42e226f"
+        },
+        {
+          "value": " est indéfini, l'image par défaut située dans `assets/cover.jpg` sera affichée. Assurez-vous que le chemin vers l'image par défaut est correct.",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "responseId": "response_5152d553-34b8-4091-809c-74171dd4d361",
+      "isHidden": false,
+      "result": {
+        "timings": {
+          "firstProgress": 1368,
+          "totalElapsed": 3948
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "import { Book } from \"../../types\";\nimport defaultCover from \"../../assets/cover.jpg\"; // Importez l'image par défaut\n\ninterface BookProps {\n  book: Book;\n}\n\nconst BookCard = ({ book }: BookProps) => {\n  return (\n    <div className=\"card\">\n      <div className=\"card-body\">\n        <h3 className=\"card-title\">{book.title}</h3>\n        <img\n          src={book.cover || defaultCover} // Utilisez l'image par défaut si book.cover est indéfini\n          className=\"card-img-top\"\n          alt={book.title}\n        />\n        <p className=\"card-text\">\n          <strong>Author:</strong> {book.author}\n        </p>\n        <p className=\"card-text\">\n          <strong>Year:</strong> {book.year}\n        </p>\n      </div>\n    </div>\n  );\n};\n\nexport default BookCard;\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+                "scheme": "file"
+              },
+              "language": "tsx",
+              "markdownBeforeBlock": "Pour afficher une image par défaut lorsque la couverture du livre est indéfinie, vous pouvez modifier le composant `BookCard` pour utiliser une image de secours. Voici comment vous pouvez le faire :\n\n"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "si la cover est undifiened on affiche l'image qui est dans assets/cover.jpg"
+            },
+            {
+              "role": "assistant",
+              "content": "Pour afficher une image par défaut lorsque la couverture du livre est indéfinie, vous pouvez modifier le composant `BookCard` pour utiliser une image de secours. Voici comment vous pouvez le faire :\n\n```tsx\n// filepath: /Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx\nimport { Book } from \"../../types\";\nimport defaultCover from \"../../assets/cover.jpg\"; // Importez l'image par défaut\n\ninterface BookProps {\n  book: Book;\n}\n\nconst BookCard = ({ book }: BookProps) => {\n  return (\n    <div className=\"card\">\n      <div className=\"card-body\">\n        <h3 className=\"card-title\">{book.title}</h3>\n        <img\n          src={book.cover || defaultCover} // Utilisez l'image par défaut si book.cover est indéfini\n          className=\"card-img-top\"\n          alt={book.title}\n        />\n        <p className=\"card-text\">\n          <strong>Author:</strong> {book.author}\n        </p>\n        <p className=\"card-text\">\n          <strong>Year:</strong> {book.year}\n        </p>\n      </div>\n    </div>\n  );\n};\n\nexport default BookCard;\n```\n\nAvec cette modification, si `book.cover` est indéfini, l'image par défaut située dans `assets/cover.jpg` sera affichée. Assurez-vous que le chemin vers l'image par défaut est correct."
+            }
+          ],
+          "modelMessageId": "bed735f7-674f-463a-99c5-793d9327c008",
+          "responseId": "64f5e1de-d0fa-4d24-854f-36fe6a893d42",
+          "sessionId": "9e753360-24e8-483b-9f6c-cba69600b696",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Demander à Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "Vous pouvez me poser des questions générales sur la programmation ou converser avec les participants suivants qui ont une expertise spécialisée et peuvent effectuer les actions suivantes :",
+          "helpTextVariablesPrefix": "Vous pouvez également m’aider à comprendre votre question en utilisant les variables suivantes pour me donner un contexte supplémentaire :",
+          "helpTextPostfix": {
+            "value": "Pour avoir une conversation intéressante, posez-moi des questions comme si j’étais un vrai programmeur :\n\n* **Montrez-moi le code** dont vous voulez parler en ouvrant les fichiers et en sélectionnant les lignes les plus importantes.\n* **Apportez des améliorations** en me posant des questions de suivi, en ajoutant des clarifications, en fournissant des erreurs, etc.\n* **Passez en revue mon code suggéré** et parlez-moi des problèmes ou des points d’amélioration afin que je puisse effectuer une itération.\n\nVous pouvez également me poser des questions sur la sélection de votre éditeur en [démarrant une session de conversation inline](command:inlineChat.start).\n\nEn savoir plus sur [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) dans [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Ou explorez la [procédure pas à pas Copilot](commande:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "commande:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "commande"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "supportsSlowVariables": true,
+          "requester": {
+            "name": "bastien-joyeau-vinci",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/165775081",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+              "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+              "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/components/Book/BookPageView.tsx",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 31,
+              "endColumn": 25
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1735584704014
+    },
+    {
+      "requestId": "request_51313b67-7b9e-4818-b8bb-8e80c3ab5858",
+      "message": {
+        "text": "commente moi ce code en francais SIMPLE pour une meilleure compréhansion",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 72
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 73
+            },
+            "text": "commente moi ce code en francais SIMPLE pour une meilleure compréhansion",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": []
+      },
+      "response": [
+        {
+          "value": "Bien sûr, voici une explication simple en français :\n\n```typescript\n// Déclaration d'une interface pour représenter un livre\ninterface Book {\n  id: number; // Identifiant unique du livre\n  title: string; // Titre du livre\n  author: string; // Auteur du livre\n  year: number; // Année de publication du livre\n  cover?: string; // URL de la couverture du livre (optionnel)\n}\n\n// Déclaration d'une interface pour le contexte des livres\ninterface BookContext {\n  books: Book[]; // Liste de livres\n  loginUser: (user: User) => Promise<void>; // Fonction pour connecter un utilisateur, retourne une promesse\n  authenticatedUser: MaybeAuthenticatedUser; // Utilisateur authentifié ou non\n  clearUser: () => void; // Fonction pour déconnecter l'utilisateur\n}\n\n// Déclaration d'une interface pour représenter un utilisateur\ninterface User {\n  username: string; // Nom d'utilisateur\n  password: string; // Mot de passe\n}\n\n// Déclaration d'une interface pour représenter un utilisateur authentifié\ninterface AuthenticatedUser {\n  username: string; // Nom d'utilisateur\n  token: string; // Jeton d'authentification\n}\n\n// Type qui peut être un utilisateur authentifié ou non (undefined)\ntype MaybeAuthenticatedUser = AuthenticatedUser | undefined;\n\n// Exportation des types pour les utiliser dans d'autres fichiers\nexport type {Book, BookContext, User, AuthenticatedUser, MaybeAuthenticatedUser };\n```\n\nEn résumé :\n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "Book",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 11,
+                "endLineNumber": 1,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "812547f6-c62c-46ac-beda-9bf0001d5d98"
+        },
+        {
+          "value": " représente un livre avec des propriétés comme ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "id",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2,
+                "startColumn": 3,
+                "endLineNumber": 2,
+                "endColumn": 3
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "fc6a8271-af13-49f9-9ba3-f9fb49b2dcb7"
+        },
+        {
+          "value": ", ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "title",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 3,
+                "startColumn": 3,
+                "endLineNumber": 3,
+                "endColumn": 3
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "a0579839-78d3-4a00-9ee7-ccfffa589201"
+        },
+        {
+          "value": ", ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "author",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 4,
+                "startColumn": 3,
+                "endLineNumber": 4,
+                "endColumn": 3
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "e29e210c-2882-468d-beea-defaa504b29e"
+        },
+        {
+          "value": ", ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "year",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 5,
+                "startColumn": 3,
+                "endLineNumber": 5,
+                "endColumn": 3
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "ad7155c0-5e83-45b9-bfd3-ce2a34908745"
+        },
+        {
+          "value": ", et ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "cover",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 6,
+                "startColumn": 3,
+                "endLineNumber": 6,
+                "endColumn": 3
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "021d463a-91e3-408e-af38-199a467f94b8"
+        },
+        {
+          "value": ".\n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "BookContext",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 9,
+                "startColumn": 11,
+                "endLineNumber": 9,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "96d4e6ad-fe63-4c06-a328-cfb8c0300c05"
+        },
+        {
+          "value": " gère une liste de livres et les actions liées à l'authentification des utilisateurs.\n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "User",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 16,
+                "startColumn": 11,
+                "endLineNumber": 16,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "5b109bc3-61c6-4895-82e4-faee2d4459ab"
+        },
+        {
+          "value": " représente un utilisateur avec un ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "username",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 17,
+                "startColumn": 3,
+                "endLineNumber": 17,
+                "endColumn": 3
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "e480b96b-d045-44f4-914c-d9eef332bf82"
+        },
+        {
+          "value": " et un ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "password",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 18,
+                "startColumn": 3,
+                "endLineNumber": 18,
+                "endColumn": 3
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "f5f3aa5e-cc2d-4eeb-ae84-16fcdbd2b6ae"
+        },
+        {
+          "value": ".\n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "AuthenticatedUser",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 21,
+                "startColumn": 11,
+                "endLineNumber": 21,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "2c55ca93-ad30-4894-b6f6-63cfbf70a0ec"
+        },
+        {
+          "value": " représente un utilisateur authentifié avec un ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "username",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 17,
+                "startColumn": 3,
+                "endLineNumber": 17,
+                "endColumn": 3
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "28cc753a-ee1a-4906-b783-90019db023d4"
+        },
+        {
+          "value": " et un ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "token",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 23,
+                "startColumn": 3,
+                "endLineNumber": 23,
+                "endColumn": 3
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "34109248-337d-4db9-9fd2-c5d6df16778e"
+        },
+        {
+          "value": ".\n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "MaybeAuthenticatedUser",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 26,
+                "startColumn": 6,
+                "endLineNumber": 26,
+                "endColumn": 6
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "a1c81d33-19c5-4ec2-a2ba-0231c29c6d6c"
+        },
+        {
+          "value": " peut être soit un ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "AuthenticatedUser",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 21,
+                "startColumn": 11,
+                "endLineNumber": 21,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "1d857d74-518a-4059-bce5-230405be2d96"
+        },
+        {
+          "value": ", soit `undefined`.\n\nCes types sont exportés pour être utilisés ailleurs dans votre projet.",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "responseId": "response_376b5a73-69f8-4011-ad81-2cda3079a77c",
+      "isHidden": false,
+      "result": {
+        "timings": {
+          "firstProgress": 1745,
+          "totalElapsed": 5379
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "// Déclaration d'une interface pour représenter un livre\ninterface Book {\n  id: number; // Identifiant unique du livre\n  title: string; // Titre du livre\n  author: string; // Auteur du livre\n  year: number; // Année de publication du livre\n  cover?: string; // URL de la couverture du livre (optionnel)\n}\n\n// Déclaration d'une interface pour le contexte des livres\ninterface BookContext {\n  books: Book[]; // Liste de livres\n  loginUser: (user: User) => Promise<void>; // Fonction pour connecter un utilisateur, retourne une promesse\n  authenticatedUser: MaybeAuthenticatedUser; // Utilisateur authentifié ou non\n  clearUser: () => void; // Fonction pour déconnecter l'utilisateur\n}\n\n// Déclaration d'une interface pour représenter un utilisateur\ninterface User {\n  username: string; // Nom d'utilisateur\n  password: string; // Mot de passe\n}\n\n// Déclaration d'une interface pour représenter un utilisateur authentifié\ninterface AuthenticatedUser {\n  username: string; // Nom d'utilisateur\n  token: string; // Jeton d'authentification\n}\n\n// Type qui peut être un utilisateur authentifié ou non (undefined)\ntype MaybeAuthenticatedUser = AuthenticatedUser | undefined;\n\n// Exportation des types pour les utiliser dans d'autres fichiers\nexport type {Book, BookContext, User, AuthenticatedUser, MaybeAuthenticatedUser };\n",
+              "language": "typescript",
+              "markdownBeforeBlock": "Bien sûr, voici une explication simple en français :\n\n"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "commente moi ce code en francais SIMPLE pour une meilleure compréhansion"
+            },
+            {
+              "role": "assistant",
+              "content": "Bien sûr, voici une explication simple en français :\n\n```typescript\n// Déclaration d'une interface pour représenter un livre\ninterface Book {\n  id: number; // Identifiant unique du livre\n  title: string; // Titre du livre\n  author: string; // Auteur du livre\n  year: number; // Année de publication du livre\n  cover?: string; // URL de la couverture du livre (optionnel)\n}\n\n// Déclaration d'une interface pour le contexte des livres\ninterface BookContext {\n  books: Book[]; // Liste de livres\n  loginUser: (user: User) => Promise<void>; // Fonction pour connecter un utilisateur, retourne une promesse\n  authenticatedUser: MaybeAuthenticatedUser; // Utilisateur authentifié ou non\n  clearUser: () => void; // Fonction pour déconnecter l'utilisateur\n}\n\n// Déclaration d'une interface pour représenter un utilisateur\ninterface User {\n  username: string; // Nom d'utilisateur\n  password: string; // Mot de passe\n}\n\n// Déclaration d'une interface pour représenter un utilisateur authentifié\ninterface AuthenticatedUser {\n  username: string; // Nom d'utilisateur\n  token: string; // Jeton d'authentification\n}\n\n// Type qui peut être un utilisateur authentifié ou non (undefined)\ntype MaybeAuthenticatedUser = AuthenticatedUser | undefined;\n\n// Exportation des types pour les utiliser dans d'autres fichiers\nexport type {Book, BookContext, User, AuthenticatedUser, MaybeAuthenticatedUser };\n```\n\nEn résumé :\n- `Book` représente un livre avec des propriétés comme `id`, `title`, `author`, `year`, et `cover`.\n- `BookContext` gère une liste de livres et les actions liées à l'authentification des utilisateurs.\n- `User` représente un utilisateur avec un `username` et un `password`.\n- `AuthenticatedUser` représente un utilisateur authentifié avec un `username` et un `token`.\n- `MaybeAuthenticatedUser` peut être soit un `AuthenticatedUser`, soit `undefined`.\n\nCes types sont exportés pour être utilisés ailleurs dans votre projet."
+            }
+          ],
+          "modelMessageId": "dd536a5a-fbe8-4444-9d79-797e62d54cd0",
+          "responseId": "a948c395-bfbb-4d83-bf9f-2c8cf2f9b7d5",
+          "sessionId": "712174d9-2d35-40bf-9f66-e14683d15901",
+          "agentId": "github.copilot.editor"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.editor",
+        "description": "Demander à Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": false,
+          "supportIssueReporting": false
+        },
+        "name": "Copilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "editor"
+        ],
+        "slashCommands": [
+          {
+            "name": "doc",
+            "description": "Ajouter un commentaire de documentation pour ce symbole"
+          },
+          {
+            "name": "fix",
+            "description": "Proposer un correctif pour les problèmes dans le code sélectionné"
+          },
+          {
+            "name": "explain",
+            "description": "Expliquer le fonctionnement du code dans votre éditeur actif"
+          },
+          {
+            "name": "tests",
+            "description": "Générer des tests unitaires pour le code sélectionné"
+          }
+        ],
+        "disambiguation": []
+      },
+      "slashCommand": {
+        "name": "explain",
+        "description": "Expliquer le fonctionnement du code dans votre éditeur actif"
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timestamp": 1735639461969
+    },
+    {
+      "requestId": "request_3b6a5000-b1e0-4c00-948a-a575ca5a7dc3",
+      "message": {
+        "text": "rajoute des commentaires SIMPLES et en francais dans mon code pour une meilleure compréhansion .",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 96
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 97
+            },
+            "text": "rajoute des commentaires SIMPLES et en francais dans mon code pour une meilleure compréhansion .",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "id": "vscode.implicit.viewport",
+            "name": "file:types.ts",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 29,
+                "endColumn": 1
+              }
+            },
+            "isFile": true,
+            "isDynamic": true,
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Voici votre code avec des commentaires simples en français pour une meilleure compréhension :\n\n```typescript\n// Définition de l'interface Book pour représenter un livre\ninterface Book {\n  id: number; // Identifiant unique du livre\n  title: string; // Titre du livre\n  author: string; // Auteur du livre\n  year: number; // Année de publication du livre\n  cover?: string; // URL de la couverture du livre (optionnel)\n}\n\n// Définition de l'interface BookContext pour le contexte des livres\ninterface BookContext {\n  books: Book[]; // Liste de livres\n  loginUser: (user: User) => Promise<void>; // Fonction pour connecter un utilisateur, retourne une promesse\n  authenticatedUser: MaybeAuthenticatedUser; // Utilisateur authentifié ou non\n  clearUser: () => void; // Fonction pour déconnecter l'utilisateur\n}\n\n// Définition de l'interface User pour représenter un utilisateur\ninterface User {\n  username: string; // Nom d'utilisateur\n  password: string; // Mot de passe\n}\n\n// Définition de l'interface AuthenticatedUser pour représenter un utilisateur authentifié\ninterface AuthenticatedUser {\n  username: string; // Nom d'utilisateur\n  token: string; // Jeton d'authentification\n}\n\n// Type qui peut être un utilisateur authentifié ou non (undefined)\ntype MaybeAuthenticatedUser = AuthenticatedUser | undefined;\n\n// Exportation des types pour les utiliser dans d'autres fichiers\nexport type { Book, BookContext, User, AuthenticatedUser, MaybeAuthenticatedUser };\n```\n\nAvec ces commentaires, le code est plus facile à comprendre pour quelqu'un qui le lit pour la première fois.",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "responseId": "response_fc2f8485-b5e7-41b5-a7c3-256d6e4b772f",
+      "isHidden": false,
+      "result": {
+        "timings": {
+          "firstProgress": 1060,
+          "totalElapsed": 4346
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "// Définition de l'interface Book pour représenter un livre\ninterface Book {\n  id: number; // Identifiant unique du livre\n  title: string; // Titre du livre\n  author: string; // Auteur du livre\n  year: number; // Année de publication du livre\n  cover?: string; // URL de la couverture du livre (optionnel)\n}\n\n// Définition de l'interface BookContext pour le contexte des livres\ninterface BookContext {\n  books: Book[]; // Liste de livres\n  loginUser: (user: User) => Promise<void>; // Fonction pour connecter un utilisateur, retourne une promesse\n  authenticatedUser: MaybeAuthenticatedUser; // Utilisateur authentifié ou non\n  clearUser: () => void; // Fonction pour déconnecter l'utilisateur\n}\n\n// Définition de l'interface User pour représenter un utilisateur\ninterface User {\n  username: string; // Nom d'utilisateur\n  password: string; // Mot de passe\n}\n\n// Définition de l'interface AuthenticatedUser pour représenter un utilisateur authentifié\ninterface AuthenticatedUser {\n  username: string; // Nom d'utilisateur\n  token: string; // Jeton d'authentification\n}\n\n// Type qui peut être un utilisateur authentifié ou non (undefined)\ntype MaybeAuthenticatedUser = AuthenticatedUser | undefined;\n\n// Exportation des types pour les utiliser dans d'autres fichiers\nexport type { Book, BookContext, User, AuthenticatedUser, MaybeAuthenticatedUser };\n",
+              "language": "typescript",
+              "markdownBeforeBlock": "Voici votre code avec des commentaires simples en français pour une meilleure compréhension :\n\n"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "rajoute des commentaires SIMPLES et en francais dans mon code pour une meilleure compréhansion ."
+            },
+            {
+              "role": "assistant",
+              "content": "Voici votre code avec des commentaires simples en français pour une meilleure compréhension :\n\n```typescript\n// Définition de l'interface Book pour représenter un livre\ninterface Book {\n  id: number; // Identifiant unique du livre\n  title: string; // Titre du livre\n  author: string; // Auteur du livre\n  year: number; // Année de publication du livre\n  cover?: string; // URL de la couverture du livre (optionnel)\n}\n\n// Définition de l'interface BookContext pour le contexte des livres\ninterface BookContext {\n  books: Book[]; // Liste de livres\n  loginUser: (user: User) => Promise<void>; // Fonction pour connecter un utilisateur, retourne une promesse\n  authenticatedUser: MaybeAuthenticatedUser; // Utilisateur authentifié ou non\n  clearUser: () => void; // Fonction pour déconnecter l'utilisateur\n}\n\n// Définition de l'interface User pour représenter un utilisateur\ninterface User {\n  username: string; // Nom d'utilisateur\n  password: string; // Mot de passe\n}\n\n// Définition de l'interface AuthenticatedUser pour représenter un utilisateur authentifié\ninterface AuthenticatedUser {\n  username: string; // Nom d'utilisateur\n  token: string; // Jeton d'authentification\n}\n\n// Type qui peut être un utilisateur authentifié ou non (undefined)\ntype MaybeAuthenticatedUser = AuthenticatedUser | undefined;\n\n// Exportation des types pour les utiliser dans d'autres fichiers\nexport type { Book, BookContext, User, AuthenticatedUser, MaybeAuthenticatedUser };\n```\n\nAvec ces commentaires, le code est plus facile à comprendre pour quelqu'un qui le lit pour la première fois."
+            }
+          ],
+          "modelMessageId": "d820fd82-825f-4717-9b21-6ee5d4582e70",
+          "responseId": "f12ae477-37a2-4d43-840f-6c638f75c4cb",
+          "sessionId": "9e753360-24e8-483b-9f6c-cba69600b696",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Demander à Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "Vous pouvez me poser des questions générales sur la programmation ou converser avec les participants suivants qui ont une expertise spécialisée et peuvent effectuer les actions suivantes :",
+          "helpTextVariablesPrefix": "Vous pouvez également m’aider à comprendre votre question en utilisant les variables suivantes pour me donner un contexte supplémentaire :",
+          "helpTextPostfix": {
+            "value": "Pour avoir une conversation intéressante, posez-moi des questions comme si j’étais un vrai programmeur :\n\n* **Montrez-moi le code** dont vous voulez parler en ouvrant les fichiers et en sélectionnant les lignes les plus importantes.\n* **Apportez des améliorations** en me posant des questions de suivi, en ajoutant des clarifications, en fournissant des erreurs, etc.\n* **Passez en revue mon code suggéré** et parlez-moi des problèmes ou des points d’amélioration afin que je puisse effectuer une itération.\n\nVous pouvez également me poser des questions sur la sélection de votre éditeur en [démarrant une session de conversation inline](command:inlineChat.start).\n\nEn savoir plus sur [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) dans [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Ou explorez la [procédure pas à pas Copilot](commande:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "commande:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "commande"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "supportsSlowVariables": true,
+          "requester": {
+            "name": "bastien-joyeau-vinci",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/165775081",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+              "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+              "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 29,
+              "endColumn": 1
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1735639531679
+    },
+    {
+      "requestId": "request_4f96c173-4f93-4f46-a873-13a2fb188af0",
+      "message": {
+        "text": "moins chargé (1 commentaire par interface)",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 42
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 43
+            },
+            "text": "moins chargé (1 commentaire par interface)",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "id": "vscode.implicit.viewport",
+            "name": "file:types.ts",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 34,
+                "endColumn": 84
+              }
+            },
+            "isFile": true,
+            "isDynamic": true,
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "D'accord, voici votre code avec des commentaires simplifiés :\n\n```typescript\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "// Interface pour représenter un livre\ninterface Book {\n  id: number;\n  title: string;\n  author: string;\n  year: number;\n  cover?: string;\n}\n\n// Interface pour le contexte des livres\ninterface BookContext {\n  books: Book[];\n  loginUser: (user: User) => Promise<void>;\n  authenticatedUser: MaybeAuthenticatedUser;\n  clearUser: () => void;\n}\n\n// Interface pour représenter un utilisateur\ninterface User {\n  username: string;\n  password: string;\n}\n\n// Interface pour représenter un utilisateur authentifié\ninterface AuthenticatedUser {\n  username: string;\n  token: string;\n}\n\n// Type qui peut être un utilisateur authentifié ou non\ntype MaybeAuthenticatedUser = AuthenticatedUser | undefined;\n\n// Exportation des types pour les utiliser dans d'autres fichiers\nexport type { Book, BookContext, User, AuthenticatedUser, MaybeAuthenticatedUser };\n```\n\nAvec ces commentaires simplifiés, le code reste clair et compréhensible sans être surchargé.",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "responseId": "response_ad192ee5-fdc3-40da-b1d1-a12d4145a06f",
+      "isHidden": false,
+      "result": {
+        "timings": {
+          "firstProgress": 1122,
+          "totalElapsed": 3487
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "// Interface pour représenter un livre\ninterface Book {\n  id: number;\n  title: string;\n  author: string;\n  year: number;\n  cover?: string;\n}\n\n// Interface pour le contexte des livres\ninterface BookContext {\n  books: Book[];\n  loginUser: (user: User) => Promise<void>;\n  authenticatedUser: MaybeAuthenticatedUser;\n  clearUser: () => void;\n}\n\n// Interface pour représenter un utilisateur\ninterface User {\n  username: string;\n  password: string;\n}\n\n// Interface pour représenter un utilisateur authentifié\ninterface AuthenticatedUser {\n  username: string;\n  token: string;\n}\n\n// Type qui peut être un utilisateur authentifié ou non\ntype MaybeAuthenticatedUser = AuthenticatedUser | undefined;\n\n// Exportation des types pour les utiliser dans d'autres fichiers\nexport type { Book, BookContext, User, AuthenticatedUser, MaybeAuthenticatedUser };\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+                "scheme": "file"
+              },
+              "language": "typescript",
+              "markdownBeforeBlock": "D'accord, voici votre code avec des commentaires simplifiés :\n\n"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "moins chargé (1 commentaire par interface)"
+            },
+            {
+              "role": "assistant",
+              "content": "D'accord, voici votre code avec des commentaires simplifiés :\n\n```typescript\n// filepath: /Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts\n// Interface pour représenter un livre\ninterface Book {\n  id: number;\n  title: string;\n  author: string;\n  year: number;\n  cover?: string;\n}\n\n// Interface pour le contexte des livres\ninterface BookContext {\n  books: Book[];\n  loginUser: (user: User) => Promise<void>;\n  authenticatedUser: MaybeAuthenticatedUser;\n  clearUser: () => void;\n}\n\n// Interface pour représenter un utilisateur\ninterface User {\n  username: string;\n  password: string;\n}\n\n// Interface pour représenter un utilisateur authentifié\ninterface AuthenticatedUser {\n  username: string;\n  token: string;\n}\n\n// Type qui peut être un utilisateur authentifié ou non\ntype MaybeAuthenticatedUser = AuthenticatedUser | undefined;\n\n// Exportation des types pour les utiliser dans d'autres fichiers\nexport type { Book, BookContext, User, AuthenticatedUser, MaybeAuthenticatedUser };\n```\n\nAvec ces commentaires simplifiés, le code reste clair et compréhensible sans être surchargé."
+            }
+          ],
+          "modelMessageId": "60072394-ce19-47b3-b5c1-050b50c1bedf",
+          "responseId": "33ff89c5-6533-43ab-bdfc-2b0b59fd90c5",
+          "sessionId": "9e753360-24e8-483b-9f6c-cba69600b696",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Demander à Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "Vous pouvez me poser des questions générales sur la programmation ou converser avec les participants suivants qui ont une expertise spécialisée et peuvent effectuer les actions suivantes :",
+          "helpTextVariablesPrefix": "Vous pouvez également m’aider à comprendre votre question en utilisant les variables suivantes pour me donner un contexte supplémentaire :",
+          "helpTextPostfix": {
+            "value": "Pour avoir une conversation intéressante, posez-moi des questions comme si j’étais un vrai programmeur :\n\n* **Montrez-moi le code** dont vous voulez parler en ouvrant les fichiers et en sélectionnant les lignes les plus importantes.\n* **Apportez des améliorations** en me posant des questions de suivi, en ajoutant des clarifications, en fournissant des erreurs, etc.\n* **Passez en revue mon code suggéré** et parlez-moi des problèmes ou des points d’amélioration afin que je puisse effectuer une itération.\n\nVous pouvez également me poser des questions sur la sélection de votre éditeur en [démarrant une session de conversation inline](command:inlineChat.start).\n\nEn savoir plus sur [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) dans [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Ou explorez la [procédure pas à pas Copilot](commande:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "commande:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "commande"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "supportsSlowVariables": true,
+          "requester": {
+            "name": "bastien-joyeau-vinci",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/165775081",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+              "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+              "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/src/types.ts",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 34,
+              "endColumn": 84
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1735639603447
+    },
+    {
+      "requestId": "request_fab67419-68c3-45bd-9f16-55e44343c875",
+      "message": {
+        "text": "fait pareil ici",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 15
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 16
+            },
+            "text": "fait pareil ici",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "id": "vscode.implicit.viewport",
+            "name": "file:vite.config.ts",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+                "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 19,
+                "endColumn": 1
+              }
+            },
+            "isFile": true,
+            "isDynamic": true,
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Voici votre fichier ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " avec des commentaires simplifiés :\n\n```typescript\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+            "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\n\n// Configuration de Vite\nexport default defineConfig({\n  plugins: [react()], // Utilisation du plugin React\n  server: {\n    proxy: {\n      '/api': {\n        target: 'http://localhost:3000', // Cible du proxy\n        changeOrigin: true,\n        rewrite: (path) => path.replace(/^\\/api/, ''), // Réécriture du chemin\n      }\n    },\n  },\n})\n```\n\nAvec ces commentaires, le fichier de configuration est plus facile à comprendre sans être surchargé.",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "responseId": "response_648b46bb-18aa-47c1-8b61-9e595d780882",
+      "isHidden": false,
+      "result": {
+        "timings": {
+          "firstProgress": 1273,
+          "totalElapsed": 3021
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\n\n// Configuration de Vite\nexport default defineConfig({\n  plugins: [react()], // Utilisation du plugin React\n  server: {\n    proxy: {\n      '/api': {\n        target: 'http://localhost:3000', // Cible du proxy\n        changeOrigin: true,\n        rewrite: (path) => path.replace(/^\\/api/, ''), // Réécriture du chemin\n      }\n    },\n  },\n})\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+                "scheme": "file"
+              },
+              "language": "typescript",
+              "markdownBeforeBlock": "Voici votre fichier `vite.config.ts` avec des commentaires simplifiés :\n\n"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "fait pareil ici"
+            },
+            {
+              "role": "assistant",
+              "content": "Voici votre fichier `vite.config.ts` avec des commentaires simplifiés :\n\n```typescript\n// filepath: /Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts\nimport { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\n\n// Configuration de Vite\nexport default defineConfig({\n  plugins: [react()], // Utilisation du plugin React\n  server: {\n    proxy: {\n      '/api': {\n        target: 'http://localhost:3000', // Cible du proxy\n        changeOrigin: true,\n        rewrite: (path) => path.replace(/^\\/api/, ''), // Réécriture du chemin\n      }\n    },\n  },\n})\n```\n\nAvec ces commentaires, le fichier de configuration est plus facile à comprendre sans être surchargé."
+            }
+          ],
+          "modelMessageId": "91c3375f-a16a-4ad4-a230-f915b7a85944",
+          "responseId": "e159b1ec-0b8f-436d-95d8-1f8afecbd058",
+          "sessionId": "9e753360-24e8-483b-9f6c-cba69600b696",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Demander à Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "Vous pouvez me poser des questions générales sur la programmation ou converser avec les participants suivants qui ont une expertise spécialisée et peuvent effectuer les actions suivantes :",
+          "helpTextVariablesPrefix": "Vous pouvez également m’aider à comprendre votre question en utilisant les variables suivantes pour me donner un contexte supplémentaire :",
+          "helpTextPostfix": {
+            "value": "Pour avoir une conversation intéressante, posez-moi des questions comme si j’étais un vrai programmeur :\n\n* **Montrez-moi le code** dont vous voulez parler en ouvrant les fichiers et en sélectionnant les lignes les plus importantes.\n* **Apportez des améliorations** en me posant des questions de suivi, en ajoutant des clarifications, en fournissant des erreurs, etc.\n* **Passez en revue mon code suggéré** et parlez-moi des problèmes ou des points d’amélioration afin que je puisse effectuer une itération.\n\nVous pouvez également me poser des questions sur la sélection de votre éditeur en [démarrant une session de conversation inline](command:inlineChat.start).\n\nEn savoir plus sur [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) dans [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Ou explorez la [procédure pas à pas Copilot](commande:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "commande:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "commande"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "supportsSlowVariables": true,
+          "requester": {
+            "name": "bastien-joyeau-vinci",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/165775081",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+              "external": "file:///Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+              "path": "/Users/bastienjoyeau/Downloads/exam_web2_template/frontend/vite.config.ts",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 19,
+              "endColumn": 1
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1735639794249
+    }
+  ]
+}

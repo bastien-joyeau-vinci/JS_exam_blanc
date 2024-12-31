@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:3000
+
+### Read all books without admin token
+GET {{baseUrl}}/books
+
+### Read a single books without admin token
+GET {{baseUrl}}/books/3
+
+
+##### Define a request variable nammed admin :
+# @name admin
+POST {{baseUrl}}/auths/login
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "password":"admin"
+}
+
+### Read all books with admin token
+GET {{baseUrl}}/books
+Content-Type: application/json
+Authorization: {{admin.response.body.token}}
+
+
+### Read a single book with admin token
+GET {{baseUrl}}/books/2
+Content-Type: application/json
+Authorization: {{admin.response.body.token}}
+
